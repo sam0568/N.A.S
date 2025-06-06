@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N.A.S - para no estar tan lejos!</title>
+  <link rel="icon" href="icons8-me-gusta-64.ico" type="image/x-icon">
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #88aed0;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1, h2 {
+      color: black;
+      margin: 0.5em 0;
+    }
+
+    .carta {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      display: inline-block;
+      max-width: 90%;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff9f1c;
+      color: white;
+      cursor: pointer;
+    }
+
+    img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    #notificacion {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #333;
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>N.A.S 🚀</h1>
+  <h2>¡Para no estar tan lejos!</h2>
+
+  <div class="carta">
+    <p>Entra cada vez que me extrañes, voy a ir dejando mensajes dos veces a la semanaa 😊<br>
+      Y el primer mensaje es:</p>
+    <button onclick="mostrarMensaje()">Ver mensaje</button>
+    <p id="mensaje" style="display:none; margin-top:20px;">
+      Si lees esto, te deseo un buen día, mañana, tarde u noche, recordá agradecerle a Dios por las pequeñas cosas de la vida, te amo mi carente de cordura 💙
+    </p>
+  </div>
+
+  <img src="111_(Album)-Photoroom-Photoroom.png" alt="Winnie Pooh">
+
+  <audio controls>
+    <source src="carencias de cordura.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <!-- Notificación -->
+  <div id="notificacion">💌 Un mensaje de tu amorcito</div>
+
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.getElementById('mensaje');
+      const notificacion = document.getElementById('notificacion');
+
+      mensaje.style.display = 'block';
+      notificacion.style.display = 'block';
+
+      // Ocultar la notificación después de 3 segundos
+      setTimeout(() => {
+        notificacion.style.display = 'none';
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
